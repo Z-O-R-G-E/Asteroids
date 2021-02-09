@@ -4,7 +4,7 @@ namespace Asteroids.Singleton
 {
     internal sealed class ExampleSingleton : MonoBehaviour
     {
-        private void Statrt()
+        private void Start()
         {
             Services.Insance.Test();
         }

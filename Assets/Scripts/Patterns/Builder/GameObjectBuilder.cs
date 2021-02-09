@@ -4,13 +4,15 @@ namespace Asteroids.Builder
 {
     internal class GameObjectBuilder
     {
-        protected GameObject _gameObject;
-        
-        public GameObjectBuilder(){ 
-            _gameObject = new GameObject(); 
+        protected GameObject _gameObject { get; set; }
+
+        public GameObjectBuilder()
+        {
+            _gameObject = new GameObject();
         }
-        protected GameObjectBuilder(GameObject gameObject) { 
-            _gameObject = gameObject; 
+        protected GameObjectBuilder(GameObject gameObject)
+        {
+            _gameObject = gameObject;
         }
         public GameObjectVisualBuilder Visual => new GameObjectVisualBuilder(_gameObject);
         public GameObjectPhysicsBuilder Physics => new GameObjectPhysicsBuilder(_gameObject);
